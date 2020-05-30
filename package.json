@@ -1,0 +1,14 @@
+{
+  "name": "forca_real_bot",
+  "version": "0.0.1",
+  "description": "Telegram's bot to play \u0014\u0014hangman",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Iago Rocha Porto\\",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.50.0"
+  }
+}
