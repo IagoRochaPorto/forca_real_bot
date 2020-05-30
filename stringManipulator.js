@@ -16,9 +16,6 @@ const hideWord = function () {
     }
     return newPalavra
   })
-  console.log(novoArray)
   let hiddenWord = novoArray.join(' ')
   return hiddenWord
 }
-
-console.log(hideWord())
