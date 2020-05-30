@@ -16,6 +16,14 @@ telegram.on('text', (message) => {
       },
     })
   }
+
+  if (message.text.toLowerCase().indexOf('/join') === 0) {
+    if (dificuldadeSelecionada && categoriaSelecionada) {
+      telegram.sendMessage(message.chat.id, `O jogador ${message.chat.username} entrou no jogo`)
+    } else {
+      telegram.sendMessage(message.chat.id, `Um jogo precisa ser iniciado antes de poder entrar`)
+    }
+  }
 })
 
 telegram.on('callback_query', (callbackQuery) => {
@@ -56,5 +64,12 @@ telegram.on('callback_query', (callbackQuery) => {
         },
       }
     )
+  }
+
+  if (callbackQuery.data === 'paises') {
+    // const word = generateWord({ categoria: categoriaSelecionada, dificuldade: dificuldadeSelecionada })
+    // hiddenWord = hideWord(word)
+    categoriaSelecionada = 'paises'
+    telegram.sendMessage(callbackQuery.message.chat.id, 'Jogo iniciado')
   }
 })
