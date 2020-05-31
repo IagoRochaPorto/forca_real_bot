@@ -1,4 +1,4 @@
-const hideWord = function () {
+export const hideWord = function () {
   let word = 'Farofa'
   let remove = ' '
   let movieList = word.split(remove)
@@ -12,7 +12,7 @@ const hideWord = function () {
   let novoArray = movieList.map((palavra) => {
     let newPalavra = ''
     for (let i = 0; i < palavra.length; i++) {
-      newPalavra += '_'
+      newPalavra += '-'
     }
     return newPalavra
   })

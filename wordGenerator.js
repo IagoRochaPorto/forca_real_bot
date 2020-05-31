@@ -10,8 +10,13 @@ const words = {
   },
 }
 
-function generateWord({ dificulty, category }) {
-  return words[dificulty][category][Math.floor(Math.random() * words[dificulty][category].length)]
+export function generateWord(request) {
+  console.log(
+    words[request.dificuldade][request.categoria][
+      Math.floor(Math.random() * words[request.dificuldade][request.categoria].length)
+    ]
+  )
+  return words[request.dificuldade][request.categoria][
+    Math.floor(Math.random() * words[request.dificuldade][request.categoria].length)
+  ]
 }
-
-console.log(generateWord({ dificulty: 'facil', category: 'paises' }))
